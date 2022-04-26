@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+// import App from "./ReactDefault.js/App";
+import reportWebVitals from "./ReactDefault.js/reportWebVitals";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RegisterView from "./Routes/RegisterView";
+import NotFoundView from "./Routes/NotFoundView";
+import LoginView from "./Routes/LoginView";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginView />} />
+        <Route path="Register" element={<RegisterView />} />
+        <Route path="Login" element={<BrowserRouter />} />
+        <Route path="*" element={<NotFoundView />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
