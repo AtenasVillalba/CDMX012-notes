@@ -1,3 +1,5 @@
+import { logOut } from "../Lib/firestore";
+
 export default function PrincipalNav({
   navContainer,
   classLogo,
@@ -20,6 +22,7 @@ export default function PrincipalNav({
         className={classSignOut}
         src={require("../Resourses/cerrar-sesion.png")}
         alt="Logo"
+        onClick={logOut}
       />
     </section>
   );

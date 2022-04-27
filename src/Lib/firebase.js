@@ -5,6 +5,7 @@ import {
 } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "./firebase-config";
+
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
@@ -25,32 +26,3 @@ export const handleOnClick = async () => {
       console.error(error);
     }
   };
-
-// export const singInWithGoogle = () => {
-//   const provider = new GoogleAuthProvider();
-//   console.log({ auth });
-//   console.count();
-//   signInWithPopup(auth, provider)
-//     .then((result) => {
-//       const credential = GoogleAuthProvider.credentialFromResult(result);
-//       const token = credential.accessToken;
-
-//       const user = result.user;
-//       // ...
-//       console.log({ user });
-//       const navigate = useNavigate();
-//       navigate("/Register");
-//     })
-//     .catch((error) => {
-//       // Handle Errors here.
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//       // The email of the user's account used.
-//       const email = error.email;
-//       // The AuthCredential type that was used.
-//       const credential = GoogleAuthProvider.credentialFromError(error);
-//       console.log("Error catch", errorCode || errorMessage || email);
-
-//       // ...
-//     });
-// };
