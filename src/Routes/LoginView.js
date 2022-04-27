@@ -7,9 +7,13 @@ export default function LoginView() {
   return (
     <section className="login-view">
       <Login
-        classContainer="contenedor-login"
+      
+        classContainer="container-login"
         classLogo="logo-notes"
-        classH1="title"
+        classTitle= "title"
+        classWelcome="text-welcome"
+        classText="text-notes"
+        classSesion="text-start-sesion"
         classLogoGoogle="logo-google"
       />
     </section>
