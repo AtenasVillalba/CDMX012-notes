@@ -1,5 +1,4 @@
-import { signOut, getAuth } from "firebase/auth";
-import { getDoc, getFirestore, doc } from "firebase/firestore";
+import { signOut, getAuth,  getDoc, getFirestore, doc  } from "./Firebase-imports";
 import { app } from "./firebase";
 
 export const db = getFirestore(app);
@@ -14,7 +13,7 @@ export const userExist = async (uid) => {
 export const logOut = async () => {
   const auth = getAuth();
   console.log(auth);
-  return await signOut(auth);
+  await signOut(auth);
 };
 
 // export const logOut = async () => {

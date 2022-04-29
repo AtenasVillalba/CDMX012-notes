@@ -1,8 +1,8 @@
-import { handleOnClick, auth } from "../Lib/firebase";
-import { useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-import { userExist } from "../Lib/firestore";
+import { signInWithGoogle, auth } from "../Lib/firebase";
+// import { useEffect } from "react";
+// import { onAuthStateChanged } from "firebase/auth";
+// import { Navigate } from "react-router-dom";
+// import { userExist } from "../Lib/firestore";
 
 export default function Login({
   classContainer,
@@ -13,22 +13,18 @@ export default function Login({
   classSesion,
   classLogoGoogle,
 }) {
-  const navigate = useNavigate();
 
   //hook que se utiliza cada vez que se actualiza o renderiza la pag./Componente
-  useEffect(() => {
-    onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        console.log(user.displayName);
-        const isRegistered = userExist(user.uid);
-        if (isRegistered) {
-          navigate("/notes");
-        }
-      } else {
-        navigate("/");
-      }
-    });
-  }, [navigate]);
+  // useEffect(() => {
+  //   const user = auth.currentUser;
+
+  //   if (user) {
+  //     console.log(user.displayName);
+  //     Navigate.replace("/notes");
+  //   } else {
+  //     Navigate.replace("/");
+  //   }
+  // });
 
   return (
     <section className={classContainer}>
@@ -50,7 +46,7 @@ export default function Login({
         className={classLogoGoogle}
         src={require("../Resourses/google.png")}
         alt="Logo"
-        onClick={handleOnClick}
+        onClick={signInWithGoogle}
       />
     </section>
   );
