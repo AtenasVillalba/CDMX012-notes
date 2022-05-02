@@ -3,14 +3,16 @@ import { logOut } from "../Lib/firestore";
 export default function PrincipalNav({
   navContainer,
   classLogo,
+  imagen1,
   classTitle,
   classSignOut,
+  imagen2,
 }) {
   return (
     <section className={navContainer}>
       <img
         className={classLogo}
-        src={require("../Resourses/logo.png")}
+        src={require(`../Resourses/${imagen1}.png`)}
         alt="LogoNotes"
       />
       <img
@@ -20,7 +22,7 @@ export default function PrincipalNav({
       />
       <img
         className={classSignOut}
-        src={require("../Resourses/cerrar-sesion.png")}
+        src={require(`../Resourses/${imagen2}.png`)}
         alt="Logo"
         onClick={logOut}
       />

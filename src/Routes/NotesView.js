@@ -1,7 +1,7 @@
 import PrincipalNav from "../Components/PrincipalNav";
 import "./NotesView.css";
 import Footer from "../Components/Footer";
-import AddNote from "../Components/AddNote";
+import ImageAddNote from "../Components/ImageAddNote";
 
 export default function NotesView() {
   return (
@@ -9,12 +9,13 @@ export default function NotesView() {
       <PrincipalNav
         navContainer="notes-container"
         classLogo="logo-note"
+        imagen1="logo"
         classTitle="title-notes"
         classSignOut="sign-out"
+        imagen2="cerrar-sesion"
       />
 
-      <AddNote  
-      classAddNote="logo-addNote" />
+      <ImageAddNote classAddNote="logo-addNote" />
 
       <Footer
         classContainer="foter-container"

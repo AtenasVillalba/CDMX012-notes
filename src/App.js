@@ -10,6 +10,7 @@ import {
 import NotFoundView from "./Routes/NotFoundView";
 import LoginView from "./Routes/LoginView";
 import NotesView from "./Routes/NotesView";
+import CreateNotesView from "./Routes/CreateNotesView";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "./Lib/firebase";
@@ -35,6 +36,7 @@ function App() {
     }
   });
   return (
+    <AuthContextProvider>
     <BrowserRouter>
       <Routes>
         <Route
@@ -45,9 +47,14 @@ function App() {
           path="notes"
           element={isLogedIn ? <NotesView /> : <Navigate to="/" replace />} //Operador ternario condicion ? true : false
         />
+         <Route
+          path="new"
+          element={isLogedIn ?  <CreateNotesView /> : <Navigate to="/" replace />} //Operador ternario condicion ? true : false
+        />
         <Route path="*" element={<NotFoundView />} />
       </Routes>
     </BrowserRouter>
+    </AuthContextProvider>
   );
 }
 
