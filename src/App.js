@@ -14,29 +14,33 @@ import CreateNotesView from "./Routes/CreateNotesView";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "./Lib/firebase";
-import { AuthContextProvider } from "./AboutContext/auth-context";
 
 function App() {
   const [isLogedIn, setIsLogedIn] = useState(false);
 
+  
   useEffect(() => {
     console.log(auth.currentUser);
     if (auth.currentUser) {
+      console.log("seteo login:true");
       setIsLogedIn(true);
     } else {
+      console.log("seteo login:false");
       setIsLogedIn(false);
     }
   }, [onAuthStateChanged]);
 
   onAuthStateChanged(auth, (user) => {
+    console.log(user);
     if (user) {
+      console.log("seteo login:true");
       setIsLogedIn(true);
     } else {
+      console.log("seteo login:false");
       setIsLogedIn(false);
     }
   });
   return (
-    <AuthContextProvider>
     <BrowserRouter>
       <Routes>
         <Route
@@ -44,17 +48,18 @@ function App() {
           element={isLogedIn ? <Navigate to="/notes" /> : <LoginView replace />}
         />
         <Route
-          path="notes"
+          path="/notes"
           element={isLogedIn ? <NotesView /> : <Navigate to="/" replace />} //Operador ternario condicion ? true : false
         />
-         <Route
-          path="new"
-          element={isLogedIn ?  <CreateNotesView /> : <Navigate to="/" replace />} //Operador ternario condicion ? true : false
+        <Route
+          path="/new"
+          element={
+            isLogedIn ? <CreateNotesView /> : <Navigate to="/" replace />
+          } //Operador ternario condicion ? true : false
         />
         <Route path="*" element={<NotFoundView />} />
       </Routes>
     </BrowserRouter>
-    </AuthContextProvider>
   );
 }
 

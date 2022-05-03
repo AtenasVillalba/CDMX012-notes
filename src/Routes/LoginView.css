@@ -38,11 +38,11 @@
 }
 .text-welcome {
   width: 50%;
-  margin: 5% 25%;
+  margin: 5% 25% 0;
 }
 .text-notes {
   width: 50%;
-  margin: 5% 25%;
+  margin: 5% 25% 0;
 }
 
 .text-start-sesion {
@@ -52,5 +52,5 @@
 
 .logo-google {
   width: 15%;
-  margin: 5% 42.5% 10%;
+  margin:  2% 42.5% 3%;
 }

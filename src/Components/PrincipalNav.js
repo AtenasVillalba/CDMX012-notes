@@ -1,4 +1,5 @@
 import { logOut } from "../Lib/firestore";
+import { Link } from "react-router-dom";
 
 export default function PrincipalNav({
   navContainer,
@@ -7,14 +8,17 @@ export default function PrincipalNav({
   classTitle,
   classSignOut,
   imagen2,
+  link1,
 }) {
   return (
     <section className={navContainer}>
+      <Link to={link1}>
       <img
         className={classLogo}
         src={require(`../Resourses/${imagen1}.png`)}
         alt="LogoNotes"
       />
+      </Link>
       <img
         className={classTitle}
         src={require("../Resourses/Title.png")}

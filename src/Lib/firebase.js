@@ -5,6 +5,7 @@ import {
   initializeApp,
 } from "./Firebase-imports";
 import { firebaseConfig } from "./firebase-config";
+import { Navigate } from "react-router-dom";
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
@@ -15,6 +16,8 @@ export const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, googleProvider);
     console.log(result);
+    console.log(auth.currentUser.uid);
+    Navigate ("/notes")
   } catch (error) {
     console.error(error);
   }
@@ -29,3 +32,13 @@ export const signInWithGoogle = async () => {
 //     console.error(error);
 //   }
 // };
+
+
+// import { useHistory } from "react-router-dom";
+
+
+// let history= useHistory()
+// function clickButtonGoogle(){
+//   console.log("funciona ruta");
+//  return history.replace("/notes")
+// }
