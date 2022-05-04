@@ -1,5 +1,5 @@
-import { addNote } from "../Lib/firestore";
-import { Link } from "react-router-dom";
+// import { addNote } from "../Lib/firestore";
+// import { Link } from "react-router-dom";
 import { useState } from "react";
 import {
   getAuth,
@@ -8,7 +8,7 @@ import {
   getFirestore,
 } from "../Lib/Firebase-imports";
 import { app } from "../Lib/firebase";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function NewNote({
   classContainer,
@@ -30,7 +30,7 @@ export default function NewNote({
   const descriptionInputChangeHandler = (e) => {
     setDescriptionNote(e.target.value);
   };
-//recupersa los datos al presionar el boton de envio
+  //recupersa los datos al presionar el boton de envio
   const formSubmissionHandler = (e) => {
     e.preventDefault();
     console.log(titleNote);
@@ -38,8 +38,9 @@ export default function NewNote({
   };
 
   const navigate = useNavigate();
+  
   let addNote = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const db = getFirestore(app);
 
     const auth = getAuth();
@@ -48,8 +49,8 @@ export default function NewNote({
       const uid = user.uid;
 
       await addDoc(collection(db, "notes"), {
-        title:titleNote,
-        note:descriptionNote,
+        title: titleNote,
+        note: descriptionNote,
         date: new Date(),
         uid,
       });
@@ -75,6 +76,9 @@ export default function NewNote({
         className={inputText}
         id="note-content"
         onChange={descriptionInputChangeHandler}
+        onKeyPress={(e) => {
+          e.key === "Enter" && e.preventDefault();
+        }}
       ></input>
       {/* <Link to="/notes"> */}
       {/* <img
@@ -84,7 +88,7 @@ export default function NewNote({
           onClick={saveNote}
         /> */}
       <button
-        type="submit"
+        // type="submit"
         className={classAdd}
         onClick={addNote}
       ></button>{" "}

@@ -2,6 +2,7 @@ import PrincipalNav from "../Components/PrincipalNav";
 import "./NotesView.css";
 import Footer from "../Components/Footer";
 import ImageAddNote from "../Components/ImageAddNote";
+import Note from "../Components/Note";
 import { useContext } from "react";
 import AuthContext from "../AboutContext/auth-context";
 // import CreateNotesView from "./CreateNotesView";
@@ -10,8 +11,8 @@ import AuthContext from "../AboutContext/auth-context";
 // import { auth } from "../Lib/firebase";
 
 export default function NotesView() {
-//  const authCtx= useContext(AuthContext);
-//  const isLiggedId = authCtx.isLiggedId
+  //  const authCtx= useContext(AuthContext);
+  //  const isLiggedId = authCtx.isLiggedId
 
   return (
     <section className="notes-view">
@@ -22,19 +23,19 @@ export default function NotesView() {
         classTitle="title-notes"
         classSignOut="sign-out"
         imagen2="cerrar-sesion"
-        link1= "/notes"
-
+        link1="/notes"
       />
-      
+
       <ImageAddNote classAddNote="logo-addNote" />
-   
+
+      <Note></Note>
 
       <Footer
         classContainer="foter-container"
         textoDerechos="text-footer1"
         textoElaborado="text-footer2"
         classLogoGithup="logo-github"
-        classTextContainer= "text-container"
+        classTextContainer="text-container"
         classContainerlogo="container-logo"
       />
     </section>

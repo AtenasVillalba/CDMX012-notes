@@ -4,9 +4,9 @@
 //   signInWithPopup,
 //   GoogleAuthProvider,
 // } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
-export { getAuth, signInWithPopup, GoogleAuthProvider,  signOut} from "firebase/auth";
+export { getAuth, signInWithPopup, GoogleAuthProvider,  signOut, onAuthStateChanged } from "firebase/auth";
 export { initializeApp } from "firebase/app";
-export{ getDoc, getFirestore, doc,collection, addDoc } from "firebase/firestore";
+export{ getDoc, getFirestore, doc,collection, addDoc, getDocs } from "firebase/firestore";
 
 // export const logOut = async () => {
 //   try {
