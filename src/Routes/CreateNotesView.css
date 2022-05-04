@@ -37,13 +37,14 @@
 }
 
 .image-new-note {
-  width: 80%;
-  justify-self: center;
-  align-self: center;
+  font-family:"Hujan" ;
+  font-size: 300%;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
+  justify-self: center;
+  align-self: center;
 }
 
 .logo-new-note {

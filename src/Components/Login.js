@@ -1,30 +1,9 @@
-import { signInWithGoogle, auth } from "../Lib/firebase";
-// import { useEffect } from "react";
-// import { onAuthStateChanged } from "firebase/auth";
-// import { Navigate } from "react-router-dom";
-// import { userExist } from "../Lib/firestore";
+import { signInWithGoogle} from "../Lib/firebase";
 
-export default function Login({
-  classContainer,
-  classLogo,
-  classTitle,
-  classText,
-  classWelcome,
-  classSesion,
-  classLogoGoogle,
-}) {
 
-  //hook que se utiliza cada vez que se actualiza o renderiza la pag./Componente
-  // useEffect(() => {
-  //   const user = auth.currentUser;
-
-  //   if (user) {
-  //     console.log(user.displayName);
-  //     Navigate.replace("/notes");
-  //   } else {
-  //     Navigate.replace("/");
-  //   }
-  // });
+export default function Login(props) 
+{
+  const { classContainer,classLogo,classTitle,classText,classWelcome,classSesion,classLogoGoogle} = props
 
   return (
     <section className={classContainer}>

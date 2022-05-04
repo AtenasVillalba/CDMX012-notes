@@ -1,13 +1,8 @@
 import { Link } from "react-router-dom";
 
-export default function Footer({
-  classContainer,
-  textoDerechos,
-  textoElaborado,
-  classLogoGithup,
-  classTextContainer,
-  classContainerlogo
-}) {
+export default function Footer(props){
+const {classContainer, textoDerechos,textoElaborado,classLogoGithup, classTextContainer, classContainerlogo} = props
+
   return (
     <section className={classContainer}>
       <section className={classTextContainer}>

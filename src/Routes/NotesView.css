@@ -38,8 +38,10 @@
 }
 
 .title-notes {
-  height: 70%;
-  width: 80%;
+  /* height: 70%;
+  width: 80%; */
+  font-family:"Hujan" ;
+  font-size: 300%;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;

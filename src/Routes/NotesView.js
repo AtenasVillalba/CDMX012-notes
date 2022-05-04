@@ -5,15 +5,10 @@ import ImageAddNote from "../Components/ImageAddNote";
 import Note from "../Components/Note";
 import { useContext } from "react";
 import AuthContext from "../AboutContext/auth-context";
-// import CreateNotesView from "./CreateNotesView";
-// import { Navigate } from "react-router-dom";
-// import { useContext, useEffect } from "react";
-// import { auth } from "../Lib/firebase";
+
 
 export default function NotesView() {
-  //  const authCtx= useContext(AuthContext);
-  //  const isLiggedId = authCtx.isLiggedId
-
+  
   return (
     <section className="notes-view">
       <PrincipalNav
