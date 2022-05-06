@@ -62,7 +62,7 @@
 /*//////////////////////////////////////////////Add notes logo*/
 
 .logo-addNote {
-  position: absolute;
+  position: fixed;
   width: 20%;
   bottom: 7%;
   right: 2%;

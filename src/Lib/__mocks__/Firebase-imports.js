@@ -7,4 +7,11 @@ export const getDoc= () => Promise.resolve({});
 export const getFirestore= () => Promise.resolve({});
 export const doc= () => Promise.resolve({});
 
-collection, addDoc
+export const collection= () => Promise.resolve({});
+export const addDoc = () => Promise.resolve({});
+export const query= () => Promise.resolve({});
+export const orderBy= () => Promise.resolve({});
+export const limit = () => Promise.resolve({});
+export const onSnapshot = () => Promise.resolve({});
+export const deleteDoc= () => Promise.resolve({});
+doc, deleteDoc 

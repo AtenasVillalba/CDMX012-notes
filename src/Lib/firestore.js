@@ -4,10 +4,8 @@ import {
   getFirestore,
   collection,
   addDoc,
-  getDocs,
-  query,
-  orderBy,
-  limit,
+  doc,
+  deleteDoc,
 } from "./Firebase-imports";
 import { app } from "./firebase";
 
@@ -22,19 +20,16 @@ export const logOut = async () => {
 export const addResource = async (resourceName, data) => {
   const auth = getAuth();
   const user = auth.currentUser;
+  const email = user.email;
   if (!user) {
     return;
   }
   const uid = user.uid;
 
-  return addDoc(collection(db, resourceName), { ...data, uid });
+  return addDoc(collection(db, resourceName), { ...data, uid, email });
 };
 
-// const getNotes = async () => {
-//   const colletionNotes = collection(db, "notes");
-//   const q = query(colletionNotes, orderBy("date"), limit(3));
-//   const querySnapshot = await getDocs(q);
-//   querySnapshot.forEach((note) => {
-//     console.log(`${note.id} => ${note.data().note}`);
-//   });
-// };
+export const deleteNote = (id) => {
+  console.log("funcion eliminar");
+  deleteDoc(doc(db, "notes", id));
+};

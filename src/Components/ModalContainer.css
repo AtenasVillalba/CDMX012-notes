@@ -1,0 +1,89 @@
+
+  .modal_edit_background {
+    position: block;
+    width: 60%;
+    height: 40%;
+    right: 20%;
+    top: 25%;
+    box-shadow: 0 0 1rem 0 rgb(0 0 0 / 30%);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    display: block;
+    z-index: 99999999;
+  }
+
+  .modal_edit_container {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    top: 15%;
+    background-color: rgb(235, 235, 235);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .modal_close {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    top: -15%;
+    left: 42%;
+    cursor: pointer;
+  }
+
+  .profile_user_edit {
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: aqua;
+    top: -15%;
+  }
+
+  .input_edit_Post {
+    width: 80%;
+    height: 8rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 10% 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(65, 213, 218, 0.253);
+    border-bottom: 3px solid #00f7ff;
+    cursor: pointer;
+  }
+
+  .btn_saveChanges {
+    width: 90%;
+    height: 3rem;
+    font-size: 1.2rem;
+    background-color: #00f7ff;
+    color: black;
+    border-radius: 1.5rem;
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    border: none;
+    top: 95%;
+    cursor: pointer;
+  }
+
+  #modal_block {
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+  }

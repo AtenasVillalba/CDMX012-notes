@@ -36,7 +36,7 @@ function App() {
       console.log("seteo login:true");
       setIsLogedIn(true);
     } else {
-      console.log("seteo login:false");
+      console.log("seteo login: onauth false");
       setIsLogedIn(false);
     }
   });
