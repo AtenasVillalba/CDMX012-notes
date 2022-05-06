@@ -5,10 +5,9 @@ import ImageAddNote from "../Components/ImageAddNote";
 import Note from "../Components/Note";
 import { useContext } from "react";
 import AuthContext from "../AboutContext/auth-context";
-
+import NotesContainer from "../Components/NotesContainer";
 
 export default function NotesView() {
-  
   return (
     <section className="notes-view">
       <PrincipalNav
@@ -23,8 +22,7 @@ export default function NotesView() {
 
       <ImageAddNote classAddNote="logo-addNote" />
 
-      <Note></Note>
-
+      <NotesContainer classContainer="note-content"></NotesContainer>
       <Footer
         classContainer="foter-container"
         textoDerechos="text-footer1"

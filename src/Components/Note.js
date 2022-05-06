@@ -1,91 +1,61 @@
-import {
-  onSnapshot,
-  collection,
-  query,
-  orderBy,
-  limit,
-  getAuth,
-} from "../Lib/Firebase-imports";
-import { useEffect, useState } from "react";
-import { db, deleteNote } from "../Lib/firestore";
-import { ModalContainer } from "./ModalContainer";
+import { deleteNote } from "../Lib/firestore";
 import "./Note.css";
+import ModalContainer from "./ModalContainer";
 
-export default function Note() {
-  const [notes, setNotes] = useState([]);
+export default function Note(props) {
+  const {  note, title, date, id } = props;
 
-  const getNotes = async () => {
-    const colletionNotes = collection(db, "notes");
-    const q = query(colletionNotes, orderBy("date"), limit(20));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const docs = [];
-      querySnapshot.forEach((note) => {
-        docs.push({ ...note.data(), id: note.id });
-      });
-      setNotes(docs);
-    });
+  const showOptions = (idNote) => {
+    <ModalContainer note={idNote}></ModalContainer>;
   };
 
-  useEffect(() => {
-    console.log("datos prueba");
-    getNotes();
-  }, []);
-
-  return (
-    <section className="note-content">
-      {notes.map((note) => (
-        <section className="one-note-content" key={note.id}>
-          <section className="header-content">
-            <h1 className="date-note">{getDate(note.date)}</h1>
-            <img
-              className="delete-image"
-              src={require("../Resourses/borrar.png")}
-              alt="delete-note"
-              onClick={() => deleteNote(note.id)}
-            />
-          </section>
-          <section className="title-note-content">
-            <h1>
-              {note.title.length >= 17
-                ? note.title.substr(0, 13) + "..."
-                : note.title}
-            </h1>
-            <p>
-              {note.note.length >= 17
-                ? note.note.substr(0, 11) + "..."
-                : note.note}
-            </p>
-          </section>
-          <section className="edit-note-content">
-            <img
-              className="edit-image"
-              src={require("../Resourses/editar.png")}
-              alt="edit-note"
-            />
-            <button className="edit-button">Ver nota</button>
-          </section>
+  if (title && note) {
+    return (
+      <section className="one-note-content" key={id}>
+        <section className="header-content">
+          <h1 className="date-note">{getDate(date)}</h1>
+          <img
+            className="delete-image"
+            src={require("../Resourses/menu.png")}
+            alt="delete-note"
+            onClick={() => deleteNote(id)}
+          />
         </section>
-      ))}
-    </section>
-  );
+        <section className="title-note-content">
+          <h1>{title.length >= 17 ? title.substr(0, 13) + "..." : title}</h1>
+          <p>{note.length >= 17 ? note.substr(0, 11) + "..." : note}</p>
+        </section>
+        {/* <section className="edit-note-content">
+          <img
+            className="edit-image"
+            src={require("../Resourses/editar.png")}
+            alt="edit-note"
+          />
+          <button className="edit-button">Ver nota</button>
+        </section> */}
+      </section>
+    );
+  } else {
+    console.log("nota vacia");
+  }
 }
 
-function getDate(date) {
+const getDate = (date) => {
   return new Date(
     date.seconds * 1000 + date.nanoseconds / 1000000
   ).toDateString();
-}
-
-const updateNoteSection = (email) => {
-  const auth = getAuth();
-  const user = auth.currentUser;
-
-  if (user.email == email) {
-    return true;
-  } else {
-    return false;
-  }
 };
+
+// const updateNoteSection = (email) => {
+//   const auth = getAuth();
+//   const user = auth.currentUser;
+
+//   if (user.email == email) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
 
 // const modal=()=>{
 //   <ModalContainer

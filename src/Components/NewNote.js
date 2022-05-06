@@ -64,7 +64,13 @@ export default function NewNote(props) {
           e.key === "Enter" && e.preventDefault();
         }} // evitar evento con enter
       ></input>
-      <button className={classAdd} onClick={addNote}></button>
+      <button className={classAdd}>
+        <img
+          className={classAdd}
+          src={require("../Resourses/confirm.png")}
+          onClick={addNote}
+        />
+      </button>
     </form>
   );
 }

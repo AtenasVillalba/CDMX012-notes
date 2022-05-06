@@ -99,16 +99,16 @@
 }
 
 .image-confirm-note {
-  height: 15%;
-  padding: 0% 6%;
+  height: 10%;
+  padding: 0% 3%;
   position: fixed;
   bottom: 8%;
-  right: 8%;
-  background-image: url("../Resourses/confirm.png");
-  background-size: 80% 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
+  right: 3%;
+  /* background-image: url("../Resourses/confirm.png");
+  /* background-size: 80% 50%; */
+  /* background-repeat: no-repeat;
+  background-position: center;*/
+  background-color: white;  
   border: none;
 }
 
