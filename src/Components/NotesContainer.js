@@ -41,6 +41,7 @@ export default function NotesContainer({ classContainer }) {
       {notes.map((note) => (
         <Note
           // key={note.id}
+          name={note.name}
           note={note.note}
           title={note.title}
           date={note.date}

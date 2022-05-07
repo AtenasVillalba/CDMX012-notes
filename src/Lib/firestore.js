@@ -21,12 +21,13 @@ export const addResource = async (resourceName, data) => {
   const auth = getAuth();
   const user = auth.currentUser;
   const email = user.email;
+  const name = user.displayName
   if (!user) {
     return;
   }
   const uid = user.uid;
 
-  return addDoc(collection(db, resourceName), { ...data, uid, email });
+  return addDoc(collection(db, resourceName), { ...data, uid, email, name });
 };
 
 export const deleteNote = (id) => {

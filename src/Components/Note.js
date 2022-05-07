@@ -1,39 +1,46 @@
 import { deleteNote } from "../Lib/firestore";
 import "./Note.css";
-import ModalContainer from "./ModalContainer";
+import Swal from "sweetalert2";
+// import withReactContent from "sweetalert2-react-content";
+// const MySwal = withReactContent(Swal);
 
 export default function Note(props) {
-  const {  note, title, date, id } = props;
-
-  const showOptions = (idNote) => {
-    <ModalContainer note={idNote}></ModalContainer>;
-  };
+  const { note, title, date, id, name} = props;
 
   if (title && note) {
     return (
       <section className="one-note-content" key={id}>
         <section className="header-content">
           <h1 className="date-note">{getDate(date)}</h1>
-          <img
-            className="delete-image"
-            src={require("../Resourses/menu.png")}
-            alt="delete-note"
-            onClick={() => deleteNote(id)}
-          />
+
+          <nav className="navegacion">
+            <ul class="menu">
+              <li>
+                <a href="#">
+                  <img
+                    className="menu-image"
+                    src={require("../Resourses/menu.png")}
+                    alt="delete-note"
+                  />
+                </a>
+                <ul className="submenu">
+                  <li onClick={()=>confirmDelete(id, name)}>
+                    Borrar
+                  </li>
+                  <li>
+                   Editar
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          
         </section>
         <section className="title-note-content">
           <h1>{title.length >= 17 ? title.substr(0, 13) + "..." : title}</h1>
-          <p>{note.length >= 17 ? note.substr(0, 11) + "..." : note}</p>
+          <p>{note.length >= 30 ? note.substr(0, 45) + "..." : note}</p>
         </section>
-        {/* <section className="edit-note-content">
-          <img
-            className="edit-image"
-            src={require("../Resourses/editar.png")}
-            alt="edit-note"
-          />
-          <button className="edit-button">Ver nota</button>
-        </section> */}
-      </section>
+              </section>
     );
   } else {
     console.log("nota vacia");
@@ -46,18 +53,15 @@ const getDate = (date) => {
   ).toDateString();
 };
 
-// const updateNoteSection = (email) => {
-//   const auth = getAuth();
-//   const user = auth.currentUser;
-
-//   if (user.email == email) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
-
-// const modal=()=>{
-//   <ModalContainer
-//   id={note.id} ></ModalContainer>
-// }
+const confirmDelete = (id, name) => {
+  Swal.fire({
+    title: `Hola ${name}, ¿Desea eliminar esta nota?`,
+    text: "Al dar click en el boton confirmar no podra revertir la acción.",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Confirmar",
+    cancelButtonText: "Cancelar",
+   })
+};
