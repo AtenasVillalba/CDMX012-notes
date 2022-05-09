@@ -14,4 +14,4 @@ export const orderBy= () => Promise.resolve({});
 export const limit = () => Promise.resolve({});
 export const onSnapshot = () => Promise.resolve({});
 export const deleteDoc= () => Promise.resolve({});
-doc, deleteDoc 
+export const updateDoc = () => Promise.resolve({});

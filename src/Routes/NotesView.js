@@ -2,9 +2,6 @@ import PrincipalNav from "../Components/PrincipalNav";
 import "./NotesView.css";
 import Footer from "../Components/Footer";
 import ImageAddNote from "../Components/ImageAddNote";
-import Note from "../Components/Note";
-import { useContext } from "react";
-import AuthContext from "../AboutContext/auth-context";
 import NotesContainer from "../Components/NotesContainer";
 
 export default function NotesView() {

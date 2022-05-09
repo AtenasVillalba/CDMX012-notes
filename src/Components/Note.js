@@ -24,11 +24,12 @@ export default function Note(props) {
                   />
                 </a>
                 <ul className="submenu">
-                  <li onClick={()=>confirmDelete(id, name)}>
-                    Borrar
-                  </li>
+                 <li>Ver nota</li>
                   <li>
                    Editar
+                  </li>
+                  <li onClick={()=>confirmDelete(id, name)}>
+                    Borrar
                   </li>
                 </ul>
               </li>
@@ -38,7 +39,7 @@ export default function Note(props) {
         </section>
         <section className="title-note-content">
           <h1>{title.length >= 17 ? title.substr(0, 13) + "..." : title}</h1>
-          <p>{note.length >= 30 ? note.substr(0, 45) + "..." : note}</p>
+          <p>{note.length >= 30 ? note.substr(0, 60) + "..." : note}</p>
         </section>
               </section>
     );
@@ -63,5 +64,11 @@ const confirmDelete = (id, name) => {
     cancelButtonColor: "#3085d6",
     confirmButtonText: "Confirmar",
     cancelButtonText: "Cancelar",
-   })
+   }).then((result) => {
+    if (result.isConfirmed) { 
+      //llamamos a la fcion para eliminar   
+      deleteNote(id)               
+      
+    }
+  })    
 };

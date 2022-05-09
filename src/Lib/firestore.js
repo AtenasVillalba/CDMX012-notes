@@ -6,6 +6,7 @@ import {
   addDoc,
   doc,
   deleteDoc,
+  updateDoc,
 } from "./Firebase-imports";
 import { app } from "./firebase";
 
@@ -21,7 +22,7 @@ export const addResource = async (resourceName, data) => {
   const auth = getAuth();
   const user = auth.currentUser;
   const email = user.email;
-  const name = user.displayName
+  const name = user.displayName;
   if (!user) {
     return;
   }
@@ -34,3 +35,12 @@ export const deleteNote = (id) => {
   console.log("funcion eliminar");
   deleteDoc(doc(db, "notes", id));
 };
+
+export async function editNote(id, titleInput, descriptionInput) {
+  const noteRef = doc(db, "notes", id);
+  await updateDoc(noteRef, {
+    title: titleInput,
+    description: descriptionInput,
+    date: new Date(),
+  });
+}

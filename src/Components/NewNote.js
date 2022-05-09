@@ -54,7 +54,7 @@ export default function NewNote(props) {
         id="title-note"
         // useRef={titleInput}
       ></input>
-      <input
+      <textarea
         type="text"
         placeholder="Empiece a esribir..."
         className={inputText}
@@ -63,7 +63,7 @@ export default function NewNote(props) {
         onKeyPress={(e) => {
           e.key === "Enter" && e.preventDefault();
         }} // evitar evento con enter
-      ></input>
+      ></textarea>
       <button className={classAdd}>
         <img
           className={classAdd}

@@ -22,7 +22,7 @@ export default function NotesContainer({ classContainer }) {
       limit(20),
       where("email", "==", auth.currentUser.email)
     );
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+     onSnapshot(q, (querySnapshot) => {
       const docs = [];
       querySnapshot.forEach((note) => {
         docs.push({ ...note.data(), id: note.id });

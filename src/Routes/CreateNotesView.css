@@ -80,10 +80,15 @@
   border: none;
   color: black;
   outline: none;
+  white-space: initial;
 }
 
 .text-new-note {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   width: 80%;
+  height: 650px;
   padding: 5%;
   margin: 5%;
   font-size: x-large;
@@ -92,10 +97,9 @@
   border: none;
   color: black;
   outline: none;
-  min-height: max-content;
   word-wrap: break-word;
   word-break: break-all;
-  white-space: pre-wrap;
+  white-space: initial;
 }
 
 .image-confirm-note {
@@ -108,7 +112,7 @@
   /* background-size: 80% 50%; */
   /* background-repeat: no-repeat;
   background-position: center;*/
-  background-color: white;  
+  background-color: white;
   border: none;
 }
 
