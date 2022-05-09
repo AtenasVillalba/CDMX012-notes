@@ -1,6 +1,6 @@
 import { addResource } from "../Lib/firestore";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 export default function NewNote(props) {
   const { classContainer, inputTitle, inputText, classAdd } = props;
@@ -52,6 +52,7 @@ export default function NewNote(props) {
         className={inputTitle}
         onChange={titleInputChangeHandler}
         id="title-note"
+        autoComplete="off"
         // useRef={titleInput}
       ></input>
       <textarea
@@ -62,7 +63,8 @@ export default function NewNote(props) {
         onChange={descriptionInputChangeHandler}
         onKeyPress={(e) => {
           e.key === "Enter" && e.preventDefault();
-        }} // evitar evento con enter
+        }}
+        autoComplete="off" // evitar evento con enter
       ></textarea>
       <button className={classAdd}>
         <img

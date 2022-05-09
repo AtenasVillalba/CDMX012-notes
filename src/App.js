@@ -14,11 +14,11 @@ import CreateNotesView from "./Routes/CreateNotesView";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "./Lib/firebase";
+import EditNotesView from "./Routes/EditNotesView";
 
 function App() {
   const [isLogedIn, setIsLogedIn] = useState(false);
 
-  
   useEffect(() => {
     console.log(auth.currentUser);
     if (auth.currentUser) {
@@ -52,11 +52,17 @@ function App() {
           element={isLogedIn ? <NotesView /> : <Navigate to="/" replace />} //Operador ternario condicion ? true : false
         />
         <Route
-          path="/new"
+          path="/create"
           element={
             isLogedIn ? <CreateNotesView /> : <Navigate to="/" replace />
           } //Operador ternario condicion ? true : false
         />
+
+        <Route
+          path="/edit/:id"
+          element={isLogedIn ? <EditNotesView /> : <Navigate to="/" replace />} //Operador ternario condicion ? true : false
+        />
+
         <Route path="*" element={<NotFoundView />} />
       </Routes>
     </BrowserRouter>

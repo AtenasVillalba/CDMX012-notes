@@ -36,6 +36,8 @@ export const deleteNote = (id) => {
   deleteDoc(doc(db, "notes", id));
 };
 
+
+
 export async function editNote(id, titleInput, descriptionInput) {
   const noteRef = doc(db, "notes", id);
   await updateDoc(noteRef, {
@@ -44,3 +46,13 @@ export async function editNote(id, titleInput, descriptionInput) {
     date: new Date(),
   });
 }
+
+
+// export async function editNote ( resourserName, data) {
+//   const noteRef = doc(db, resourserName, {...data });
+//   await updateDoc(noteRef, {
+//     title: titleInput,
+//     description: descriptionInput,
+//     date: new Date(),
+//   });
+// }

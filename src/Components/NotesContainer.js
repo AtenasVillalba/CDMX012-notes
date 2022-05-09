@@ -18,7 +18,7 @@ export default function NotesContainer({ classContainer }) {
     const colletionNotes = collection(db, "notes");
     const q = query(
       colletionNotes,
-      orderBy("date"),
+      orderBy("date", "desc"),
       limit(20),
       where("email", "==", auth.currentUser.email)
     );
