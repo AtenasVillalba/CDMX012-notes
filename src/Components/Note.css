@@ -10,8 +10,8 @@
 
 .one-note-content {
   background-color: white;
-  height: 20%;
-  width: 90%;
+  height: 30%;
+  width: 30%;
   margin: 1%;
   border-radius: 10% 10% 0 0;
 }
@@ -121,3 +121,256 @@ text-decoration: none;}
   background-color: transparent;
   /* font-family: "Hujan"; */
 }
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .note-content {
+    margin: 2% 0 7%;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .one-note-content {
+    background-color: white;
+    height: 20%;
+    width: 90%;
+    margin: 1%;
+    border-radius: 10% 10% 0 0;
+  }
+  /*//////////////////////////////header de la nota//////////////////*/
+  
+  .header-content {
+    width: 100%;
+    background: linear-gradient(to right, #389eae, #20b58b, #8ed0d9);
+    height: 5%;
+    display: flex;
+    border-radius: 10% 10% 0 0;
+    align-content: center;
+    align-items: center;
+  }
+  .date-container {
+    width: 80%;
+  }
+  .date-note {
+    font-size: medium;
+    width: 80%;
+    padding: 2%;
+  }
+  
+  .navegacion {
+    width: 20%;
+  }
+  .navegacion ul {
+    list-style: none;
+  }
+  .menu-image {
+    height: 15%;
+    width: 20%;
+    margin: 3% 28% 3% 50%;
+    list-style: none;
+  }
+  
+  .menu > li {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .submenu li:hover {
+    color: black;
+    transition: all 0.3s;
+    background-color: #ffe88d;
+  }
+  
+  .submenu {
+    position: absolute;
+    background: #fedb41;
+    width: 100%;
+    visibility: hidden;
+    text-decoration: none;
+  }
+  
+  .submenu li {
+    text-align: center;
+    padding: 2.5%;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .link-edit{
+  text-decoration: none;}
+  
+  .menu li:hover .submenu {
+    visibility: visible;
+  }
+  
+  /*//////////////////////////////body de la nota//////////////////*/
+  
+  .title-note-content {
+    padding: 2%;
+    font-size: x-large;
+    align-items: center;
+    justify-items: center;
+    height: 30%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .text-value {
+    white-space: initial;
+  }
+  
+  /*//////////////////////////////footer de la nota//////////////////*/
+  .edit-note-content {
+    font-family: "Hujan";
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* backdrop-filter: blur(10px); */
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    border-radius: 25% 25% 0 0;
+  }
+  .edit-image {
+    height: 18%;
+    width: 15%;
+    margin: 1% 2% 1% 0;
+  }
+  .edit-button {
+    font-size: large;
+    border: none;
+    background-color: transparent;
+    /* font-family: "Hujan"; */
+  }
+}
+
+@media (min-width: 300px) and (max-width: 749px) {
+  .note-content {
+    margin: 2% 0 7%;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .one-note-content {
+    background-color: white;
+    height: 20%;
+    width: 90%;
+    margin: 1%;
+    border-radius: 10% 10% 0 0;
+  }
+  /*//////////////////////////////header de la nota//////////////////*/
+  
+  .header-content {
+    width: 100%;
+    background: linear-gradient(to right, #389eae, #20b58b, #8ed0d9);
+    height: 5%;
+    display: flex;
+    border-radius: 10% 10% 0 0;
+    align-content: center;
+    align-items: center;
+  }
+  .date-container {
+    width: 80%;
+  }
+  .date-note {
+    font-size: small;
+    width: 80%;
+    padding: 2%;
+  }
+  
+  .navegacion {
+    width: 25%;
+  }
+  .navegacion ul {
+    list-style: none;
+  }
+  .menu-image {
+    height: 15%;
+    width: 20%;
+    margin: 3% 28% 3% 50%;
+    list-style: none;
+  }
+  
+  .menu > li {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .submenu li:hover {
+    color: black;
+    transition: all 0.3s;
+    background-color: #ffe88d;
+  }
+  
+  .submenu {
+    position: absolute;
+    background: #fedb41;
+    width: 100%;
+    visibility: hidden;
+    text-decoration: none;
+  }
+  
+  .submenu li {
+    text-align: center;
+    padding: 2.5%;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .link-edit{
+  text-decoration: none;}
+  
+  .menu li:hover .submenu {
+    visibility: visible;
+  }
+  
+  /*//////////////////////////////body de la nota//////////////////*/
+  
+  .title-note-content {
+    padding: 2%;
+    font-size: medium;
+    align-items: center;
+    justify-items: center;
+    height: 30%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .text-value {
+    white-space: initial;
+    font-size: small;
+  }
+  
+  /*//////////////////////////////footer de la nota//////////////////*/
+  .edit-note-content {
+    font-family: "Hujan";
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* backdrop-filter: blur(10px); */
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    border-radius: 25% 25% 0 0;
+  }
+  .edit-image {
+    height: 18%;
+    width: 15%;
+    margin: 1% 2% 1% 0;
+  }
+  .edit-button {
+    font-size: large;
+    border: none;
+    background-color: transparent;
+    /* font-family: "Hujan"; */
+  }
+  }

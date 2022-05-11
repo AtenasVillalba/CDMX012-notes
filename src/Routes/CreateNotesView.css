@@ -26,8 +26,8 @@
 }
 
 .back-note {
-  width: 30%;
-  margin: 23%;
+  width: 15%;
+  margin: 12%;
   justify-self: center;
   align-self: center;
   grid-column-start: 1;
@@ -70,9 +70,9 @@
 }
 
 .title-new-note {
-  width: 80%;
+  width: 70%;
   padding: 3%;
-  margin: 5% 7%;
+  margin: 5% 12% 2%;
   font-size: x-large;
   text-align: center;
   text-justify: center;
@@ -87,10 +87,10 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  width: 80%;
-  height: 650px;
-  padding: 5%;
-  margin: 5%;
+  width: 75%;
+  height: 200px;
+  padding: 3% 0 0 12%  ;
+  margin: 0;
   font-size: x-large;
   text-align: start;
   background-color: white;
@@ -142,7 +142,7 @@
 
 .text-footer1 {
   align-content: center;
-  margin-top: 3%;
+  margin-top: 0%;
 }
 
 .container-logo {
@@ -155,4 +155,319 @@
   margin-top: 30%;
   right: 32%;
   bottom: 25%;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .create-notes-view {
+    background-color: white;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* min-width: 100vh; */
+  }
+  
+  /*////////////////////////////////Nav container*/
+  .new-notes-container {
+    display: grid;
+    height: 125px;
+    background: #badee3;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+  }
+  
+  .back-note {
+    width: 30%;
+    margin: 23%;
+    justify-self: center;
+    align-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  .image-new-note {
+    font-family: "Hujan";
+    font-size: 300%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .logo-new-note {
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  /*////////////////////////////////write note container*/
+  
+  .new-note-container {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    /* min-height: 100vh; */
+    flex-direction: column;
+  }
+  
+  .title-new-note {
+    width: 80%;
+    padding: 3%;
+    margin: 5% 7% 2%;
+    font-size: x-large;
+    text-align: center;
+    text-justify: center;
+    background-color: #badee3;
+    border: none;
+    color: black;
+    outline: none;
+    white-space: initial;
+  }
+  
+  .text-new-note {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    width: 80%;
+    height: 500px;
+    padding: 5%;
+    margin: 2% 5%;
+    font-size: x-large;
+    text-align: start;
+    background-color: white;
+    border: none;
+    color: black;
+    outline: none;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: initial;
+  }
+  
+  .image-confirm-note {
+    height: 10%;
+    padding: 0% 3%;
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    /* background-image: url("../Resourses/confirm.png");
+    /* background-size: 80% 50%; */
+    /* background-repeat: no-repeat;
+    background-position: center;*/
+    background-color: white;
+    border: none;
+  }
+  
+  /*//////////////////////////////////////////////footer*/
+  
+  .new-foter-container {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    background-color: rgba(83, 181, 192, 0.4);
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .text-container {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+    align-content: center;
+    max-height: min-content;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+  .text-footer1 {
+    align-content: center;
+    margin-top: .5%;
+  }
+  
+  .container-logo {
+    align-items: center;
+    align-content: center;
+  }
+  
+  .logo-github {
+    height: 60%;
+    margin-top: 30%;
+    right: 32%;
+    bottom: 25%;
+  }}
+
+@media (min-width: 300px) and (max-width: 749px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .create-notes-view {
+    background-color: white;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* min-width: 100vh; */
+  }
+  
+  /*////////////////////////////////Nav container*/
+  .new-notes-container {
+    display: grid;
+    height: 100px;
+    background: #badee3;
+    grid-template-columns: 20% 75% 5%;
+    grid-template-rows: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+  }
+  
+  .back-note {
+    width: 45%;
+    margin: 45% 30%;
+    justify-self: center;
+    align-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  .image-new-note {
+    font-family: "Hujan";
+    font-size: 200%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .logo-new-note {
+    visibility: hidden;
+  }
+  
+  /*////////////////////////////////write note container*/
+  
+  .new-note-container {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    /* min-height: 100vh; */
+    flex-direction: column;
+  }
+  
+  .title-new-note {
+    width: 80%;
+    padding: 3%;
+    margin: 5% 7% 2%;
+    font-size: x-large;
+    text-align: center;
+    text-justify: center;
+    background-color: #badee3;
+    border: none;
+    color: black;
+    outline: none;
+    white-space: initial;
+  }
+  
+  .text-new-note {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    width: 80%;
+    height: 400px;
+    padding: 5%;
+    margin: 2% 5%;
+    font-size: x-large;
+    text-align: start;
+    background-color: white;
+    border: none;
+    color: black;
+    outline: none;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: initial;
+  }
+  
+  .image-confirm-note {
+    height: 10%;
+    padding: 0% 3%;
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    /* background-image: url("../Resourses/confirm.png");
+    /* background-size: 80% 50%; */
+    /* background-repeat: no-repeat;
+    background-position: center;*/
+    background-color: white;
+    border: none;
+  }
+  
+  /*//////////////////////////////////////////////footer*/
+  
+  .new-foter-container {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    background-color: rgba(83, 181, 192, 0.4);
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .text-container {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+    align-content: center;
+    max-height: min-content;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+  .text-footer1 {
+    align-content: center;
+    margin-top: 0;
+  }
+  
+  .container-logo {
+    align-items: center;
+    align-content: center;
+  }
+  
+  .logo-github {
+    height: 60%;
+    margin-top: 30%;
+    right: 32%;
+    bottom: 25%;
+  }
 }
