@@ -11,7 +11,7 @@ import NotFoundView from "./Routes/NotFoundView";
 import LoginView from "./Routes/LoginView";
 import NotesView from "./Routes/NotesView";
 import CreateNotesView from "./Routes/CreateNotesView";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "./Lib/Firebase-imports";
 import { useEffect, useState } from "react";
 import { auth } from "./Lib/firebase";
 import EditNotesView from "./Routes/EditNotesView";

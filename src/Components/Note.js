@@ -2,8 +2,6 @@ import { deleteNote } from "../Lib/firestore";
 import "./Note.css";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-// import withReactContent from "sweetalert2-react-content";
-// const MySwal = withReactContent(Swal);
 
 export default function Note(props) {
   const { note, title, date, id, name } = props;

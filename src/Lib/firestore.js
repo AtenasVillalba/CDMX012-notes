@@ -47,12 +47,3 @@ export async function editNote(id, titleInput, descriptionInput) {
   });
 }
 
-
-// export async function editNote ( resourserName, data) {
-//   const noteRef = doc(db, resourserName, {...data });
-//   await updateDoc(noteRef, {
-//     title: titleInput,
-//     description: descriptionInput,
-//     date: new Date(),
-//   });
-// }
