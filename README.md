@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+## Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"><img width=350px src="https://user-images.githubusercontent.com/97538997/179527098-c45ba323-04e0-40ce-8e83-a2b01e964728.png"/> </p>
 
-## Available Scripts
 
-In the project directory, you can run:
+## Índice
 
-### `npm start`
+* [1. Resumen del proyecto.](#1-resumen-del-proyecto)
+* [2. Tecnologías.](#2-tecnologías)
+* [3. Prototipo de alta fidelidad.](#3-prototipo-de-alta-fidelidad)
+* [4. Test de usabilidad.](#4-test-de-usabilidad)
+* [5. Vista de la intefaz.](#5-vista-de-la-interfaz)
+* [6. Deploy.](#6-deploy)
+***
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 1. Resumen del proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+No existe día que no tomemos notas, siempre necesitamos apuntar alguna dirección, número telefónico, notas de alguna reunión o guardar nuestras URLs favoritas para poder consultarlas más tarde. Muchas veces para esta actividad utilizamos libretas o agendas que terminan siendo olvidadas, o anotamos de manera dispersa de tal manera que perdemos de vista la prioridad y el propósito de la nota lo cual da como resultado una nota perdida.
 
-### `npm test`
+Es por ello que este proyecto se basa en la construcción de una aplicación para tomar notas, que nos permita crear, editar, eliminar y consultarlas en cualquier momento.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. Tecnologías
 
-### `npm run build`
+<div align="center">
+<a title="ReactJs" href="https://es.reactjs.org/"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"></a>
+<a title="ReactRouter" href="https://es.reactjs.org/"><img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"></a>
+<a title="JavaScript" href="https://developer.mozilla.org/es/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></a>
+<a title="CSS" href="https://developer.mozilla.org/es/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"></a>
+<a title="Jest" href="https://jestjs.io/"><img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"></a>
+<a title="Eslint" href="https://eslint.org/"><img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"></a>
+<a title="Figma" href="https://www.figma.com/file/9Lkk5oAp6M3n7qUvPnAPDb/Burger-Queen?node-id=0%3A1/"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"></a>
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 3. Prototipo de alta fidelidad
+<img width="669" alt="prototipo alta fidelidad" src="https://user-images.githubusercontent.com/97538997/179531764-acf3b0bd-cd87-401d-8897-2fcec94333ca.png">
+<img width="668" alt="prototipo alta fidelidad2" src="https://user-images.githubusercontent.com/97538997/179531771-319659c7-558d-48e8-beb7-9c2b12748117.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 4. Test de usabilidad
+Se realizaron diferentes pruebas de usabilidad a través de la plataforma de maze para poder corroborar que la aplicación estaba siendo intuitiva y amigable con lusuario. Se observaron puntos de mejora con cada una de ellas.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 5. Vista de la interfaz
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="430" alt="Login" src="https://user-images.githubusercontent.com/97538997/179532101-0f897833-948b-49c6-875e-2c3628eda06d.png"><img width="441" alt="Menu notas" src="https://user-images.githubusercontent.com/97538997/179532096-9786b80f-7c42-4e72-b08b-058ad02d9253.png"><img width="443" alt="Crear nota" src="https://user-images.githubusercontent.com/97538997/179532082-b6393171-53b9-456f-8924-5f56db5843f9.png"><img width="440" alt="Delete notas" src="https://user-images.githubusercontent.com/97538997/179532100-8357185b-447a-4187-a7f9-4131e23b5d1d.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 6. Deploy
+Para acceder e interactuar con la página de Notas debes dar click en la imagen.
+ <p align="center">
+<a href="https://toma-nota-80e3c.web.app/notes"><img align="center" width= 300px src="https://user-images.githubusercontent.com/97538997/179527098-c45ba323-04e0-40ce-8e83-a2b01e964728.png" alt="https://toma-nota-80e3c.web.app/notes"  /></a>
+</p>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
